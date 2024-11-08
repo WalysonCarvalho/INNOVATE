@@ -11,6 +11,12 @@ import {
   CreditsColumn 
 } from "./styles";
 import logoImg from "../../assets/logo_INNOVATE.webp"
+import { FaSquareInstagram } from "react-icons/fa6";
+import { FaFacebook } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+
+
+
 
 export function Footer() {
   return (
@@ -31,9 +37,12 @@ export function Footer() {
           </MenuColumn>
           <SocialColumn className="footer-column">
             <SocialLinks>
-              <li><a href="#"><i className="bi bi-instagram"></i> Instagram</a></li>
-              <li><a href="#"><i className="bi bi-facebook"></i> Facebook</a></li>
-              <li><a href="#"><i className="bi bi-linkedin"></i> LinkedIn</a></li>
+              <li><a href="#"><i className="bi bi-instagram"></i> <FaSquareInstagram size ={60}/>
+              </a></li>
+              <li><a href="#"><FaFacebook size= {60}/>
+              </a></li>
+              <li><a href="#"><FaLinkedin size= {60} />
+              </a></li>
             </SocialLinks>
           </SocialColumn>
         </FooterInnerContainer>

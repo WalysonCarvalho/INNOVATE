@@ -11,7 +11,7 @@ export const Container = styled.header`
   justify-content: space-between;
   z-index: 99;
   transition: top 0.3s ease-in-out;
-  background: linear-gradient(to bottom, #003459, #E1F5FE );
+  background: linear-gradient(to bottom, #003459, #e1f5fe);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 `;
@@ -20,7 +20,7 @@ export const Logo = styled.div`
   width: 100%;
 
   img {
-    display: flex ;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 80px;
@@ -36,44 +36,23 @@ export const Menu = styled.div`
   z-index: 100;
 `;
 
-export const Hamburger = styled.label`
+export const MenuHeader = styled.label`
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
 
-  input {
-    display: none;
-  }
-
-  svg {
-    height: 3em;
-    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    .line {
-      fill: none;
-      stroke: white;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      stroke-width: 3;
-      transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .line-top-bottom {
-      stroke-dasharray: 12 63;
-    }
-  }
-
-  input:checked + svg {
-    transform: rotate(-45deg);
-
-    .line-top-bottom {
-      stroke-dasharray: 20 300;
-      stroke-dashoffset: -32.42;
-    }
+  &.open {
+    transform: rotate(180deg);
+    opacity: 0.7;
   }
 `;
 
 export const MenuAberto = styled.div`
-background-color:${({ theme }) => theme.COLORS.COLOR_DARKBLUE};
+  background-color: ${({ theme }) => theme.COLORS.COLOR_DARKBLUE};
   position: fixed;
   left: 0;
   top: 0;
@@ -104,8 +83,7 @@ export const NavMenu = styled.nav`
     font-size: 1.5rem;
 
     &:hover {
-      color:${({ theme }) => theme.COLORS.COLOR_BLUE}
+      color: ${({ theme }) => theme.COLORS.COLOR_BLUE};
     }
   }
 `;
-

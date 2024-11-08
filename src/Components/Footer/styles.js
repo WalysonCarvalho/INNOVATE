@@ -13,7 +13,6 @@ export const Container = styled.footer`
     font-size: 1rem;
     width: 100vw;
     text-align: center;
-    padding: 2rem;
     
   
   }
@@ -99,18 +98,20 @@ export const SocialLinks = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 
   a {
     text-decoration: none;
-    color: ${({ theme }) => theme.COLORS.COLOR_BLUE};
-    font-size: 1.2rem;
+    color: ${({ theme }) => theme.COLORS.COLOR_WHITE};
+   
     display: flex;
     align-items: center;
     transition: color 0.3s ease;
 
-    i {
-      margin-right: 0.5rem;
-    }
+
 
     &:hover {
       color: ${({ theme }) => theme.COLORS.COLOR_DARKBLUE};

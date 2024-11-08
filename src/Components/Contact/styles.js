@@ -43,17 +43,25 @@ export const Title = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  text-align: start
 
   h1 {
+    display: flex;
+    align-items: flex-start;
+    text-decoration: none;
     color:${({ theme }) => theme.COLORS.COLOR_BLUE};;
-    font-size: 8vw;
-    font-weight: lighter;
-    font-family: var(--font-grande);
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    line-height: 1.4;
+    text-align: start;
+    font-weight: bold;
+    
   }
 
   @media (max-width: 768px) {
     h1 {
-      font-size: 6vw;
+      width: 50%;
+      font-size: 8vw;
       text-align: center;
     }
   }
@@ -76,8 +84,9 @@ export const ContactList = styled.ul`
   transform: translateY(100px);
   opacity: 0;
   transition: opacity 0.3s, transform 0.3s;
+  text-align: center;
 
-  a {
+  h2 {
     text-decoration: none;
     color:${({ theme }) => theme.COLORS.COLOR_BLUE};;
     font-size: 2rem;
@@ -117,6 +126,32 @@ export const FormContainer = styled.div`
   gap: 1rem;
   padding: 2rem 0;
 
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+
+  a, li, p, h2{
+    display: flex;
+    align-items: flex-start;
+    text-decoration: none;
+    color:${({ theme }) => theme.COLORS.COLOR_BLUE};;
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    line-height: 1.4;
+    text-align: start;
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    a {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
+
   h2 {
     font-size: 2rem;
   }
@@ -152,7 +187,7 @@ export const Input = styled.input`
   font-family: var(--font-pequena);
   width: 100%;
   height: 50px;
-  border-radius: 30px;
+  border-radius: 10px;
   outline: none;
   border: 2px solid rgba(128, 128, 128, 0.5);
   padding: 0 1rem;
@@ -204,10 +239,10 @@ export const Button = styled.button`
 
 export const LogoContainer = styled.div`
 
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
   >.mapsContainer{
     margin-top: 5rem;
@@ -216,6 +251,11 @@ export const LogoContainer = styled.div`
   }
 
   @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
     >.mapsContainer {
       width: 100%;
       height: 70%;

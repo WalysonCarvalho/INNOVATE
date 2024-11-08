@@ -17,14 +17,14 @@ export const Section = styled.section`
 `;
 
 export const HeadlineSobre = styled.div`
-  width: 100%;
-  height: 30%;
+  width: 90%;
+  height: 20%;
   overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   position: absolute;
-  padding-left: 1rem;
+  max-width: 100%;
 
   .headline-scroll {
     display: flex;
@@ -38,7 +38,7 @@ export const HeadlineSobre = styled.div`
       transform: translateX(100%);
     }
     100% {
-      transform: translateX(-120%); /* Ajuste para uma rolagem contínua */
+      transform: translateX(-100%); /* Ajuste para uma rolagem contínua */
     }
   }
 
@@ -72,9 +72,12 @@ export const HeadlineSobre = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    width: 1000px;
+    width: 100%;
     height: auto;
-    padding-left: 0;
+    margin-top: 5rem;
+    max-width: max-content;
+    
+  ;
     .headline-scroll span {
       font-size: 2.5rem;
     }

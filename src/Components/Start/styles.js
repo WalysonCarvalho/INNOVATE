@@ -35,8 +35,9 @@ export const ConteudoInicio = styled.div`
   .titulo-inicio {
     font-size: clamp(1rem, 2.5vw + 0.8rem, 3rem);
     font-family: 'Roboto', sans-serif;
+    color: ${({ theme }) => theme.COLORS.COLOR_DARKBLUE};
     #classin{
-      color: ${({ theme }) => theme.COLORS.COLOR_DARKBLUE};
+      color: ${({ theme }) => theme.COLORS.COLOR_BLUE};
     }
     
     
@@ -126,6 +127,13 @@ export const BotaoCta = styled.button`
 
   &:active {
     transform: scale(0.95);
+  }
+
+  @media (max-width: 768px) {
+    background: ${({ theme }) => theme.COLORS.COLOR_BLUE};
+    border-radius: 8px;
+    height: 50px;
+
   }
 `;
 

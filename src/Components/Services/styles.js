@@ -28,7 +28,7 @@ export const Headline = styled.div`
 `;
 
 export const Title = styled.h1`
-  color: ${({ theme }) => theme.COLORS.COLOR_BLUE};
+  color: ${({ theme }) => theme.COLORS.COLOR_DARKBLUE};
   font-size: 6rem;
   font-weight: lighter;
   font-family: var(--font-grande);
@@ -40,7 +40,7 @@ export const Title = styled.h1`
 
   
   #classin{
-    color: ${({ theme }) => theme.COLORS.COLOR_DARKBLUE};
+    color: ${({ theme }) => theme.COLORS.COLOR_BLUE};
   }
 `;
 
@@ -51,7 +51,7 @@ export const Description = styled.div`
   line-height: 1.4;
   letter-spacing: 1.5px;
   
-  @media (max-width: 768px) {
+  @media (max-width: 780px) {
     >p {
       display: none;
       
@@ -74,7 +74,7 @@ export const Card = styled.div`
   border: 1px solid hsla(0, 0%, 0%, 0.35);
   max-width: 95%;
   min-height: 180px;
-  border-radius: 150px;
+  border-radius: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;

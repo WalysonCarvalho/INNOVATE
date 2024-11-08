@@ -8,7 +8,7 @@ export function Start() {
         <div className="container-inicio">
           <ConteudoInicio>
             <div className="titulo-inicio">
-              <h1><span id="classin">IN</span><span id="classin-2">N</span>OVATE</h1>
+              <h1><span id="classin">IN</span>NOVATE</h1>
               <h1 className="destaque-inicio">Sua saúde, nossa prioridade</h1>
             </div>
             <div
