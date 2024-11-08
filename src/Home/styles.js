@@ -15,18 +15,21 @@ export const Container = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-  /* Cor de fundo semitransparente */
-    z-index: 999; /* Garantindo que o fundo fique abaixo do modal */
+    z-index: 999;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
-  
-     @media (max-width: 768px) {
+
+  @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
     border: none;
+    width: auto;
   }
-   
+
+  @media (max-width: 375px), (max-width: 768px) {
+    /* Remove a barra de rolagem lateral em telas pequenas */
+    overflow-x: hidden;
+  }
 `;
